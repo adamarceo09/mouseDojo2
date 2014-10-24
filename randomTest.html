@@ -1,0 +1,43 @@
+<html lang ="en">
+	<head>
+		<meta charset ="UTF-8"/>
+		<title></title>
+		<style type ="text/css">
+		
+		</style>
+	</head>
+	
+	<body>
+		<script type = "text/javascript" >
+		var chanceArr = [0,1,2,3];
+
+function shuffle(array) {
+    var counter = array.length, temp, index;
+
+    // While there are elements in the array
+    while (counter > 0) {
+        // Pick a random index
+        index = Math.floor(Math.random() * counter);
+
+        // Decrease counter by 1
+        counter--;
+
+        // And swap the last element with it
+        temp = array[counter];
+        array[counter] = array[index];
+        array[index] = temp;
+    }
+
+    return array;
+}
+
+shuffle();
+document.write(chanceArr.length);
+document.write(chanceArr[0]);
+document.write(chanceArr[1]);
+document.write(chanceArr[2]);
+document.write(chanceArr[3]);
+
+		</script>
+	</body>
+</html>
